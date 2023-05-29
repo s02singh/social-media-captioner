@@ -10,7 +10,7 @@ image_path = os.path.join('static', 'images', 'image.jpeg')
 
 
 # Set OpenAI API credentials
-openai.api_key = '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'
+openai.api_key = 'YOUR API KEY'
 
 # Initialize the model and processor
 processor = AutoProcessor.from_pretrained("microsoft/git-base-coco")
