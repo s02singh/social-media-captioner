@@ -10,7 +10,7 @@ image_path = os.path.join('static', 'images', 'image.jpeg')
 
 
 # Set OpenAI API credentials
-openai.api_key = 'YOUR API KEY'
+openai.api_key = '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'
 
 # Initialize the model and processor
 processor = AutoProcessor.from_pretrained("microsoft/git-base-coco")
@@ -39,7 +39,7 @@ def generate_caption(request):
         
         # Generate rhyming caption using OpenAI API
         
-        prompt = "Generate a short rhyming Instagram caption using the prompt: " + generated_caption
+        prompt = "Generate a short, catchy, engaging, hype Instagram caption using the prompt: " + generated_caption
         response = openai.Completion.create(
             engine="text-davinci-003",
             prompt=prompt,
