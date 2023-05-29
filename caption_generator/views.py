@@ -10,7 +10,7 @@ image_path = os.path.join('static', 'images', 'image.jpeg')
 
 
 # Set OpenAI API credentials
-openai.api_key = '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'
+
 
 # Initialize the model and processor
 processor = AutoProcessor.from_pretrained("microsoft/git-base-coco")
@@ -26,6 +26,13 @@ def generate_caption(request):
         
         with open(image_path, 'wb') as f:
             f.write(image_file.read())
+
+        # Get the API key entered by the user
+        api_key = request.POST.get('api_key')
+
+        # Set OpenAI API credentials
+        openai.api_key = api_key
+
         
         # Open the image
         image = Image.open(image_path)
