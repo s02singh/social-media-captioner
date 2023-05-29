@@ -1,0 +1,17 @@
+// Get references to the necessary elements
+const imageUploadInput = document.getElementById('image-upload');
+const uploadedImage = document.getElementById('uploaded-image');
+
+// Listen for the file upload change event
+imageUploadInput.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  const reader = new FileReader();
+
+  // Read the uploaded file as a data URL
+  reader.readAsDataURL(file);
+
+  // Set the uploaded image source once the file is loaded
+  reader.onload = (event) => {
+    uploadedImage.src = event.target.result;
+  };
+});
