@@ -13,7 +13,7 @@ InstaCaption is a web application that generates captions for your Instagram pho
 To get started with InstaCaption, follow these steps:
 
 1. Clone the repository:
-   git clone https://github.com/s02singh/SocialMediaCaptioner.git
+   git clone https://github.com/s02singh/social-media-captioner.git
    
 2. Install the required dependencies. Make sure you have Python 3.x and pip installed. Run the following command in your project directory:
    pip install -r requirements.txt
