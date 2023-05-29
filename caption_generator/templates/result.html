@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Generated Caption</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>InstaCaption</title>
 </head>
 <body>
-    <h1>Generated Caption</h1>
-    <img src="{{ image_path }}" alt="Uploaded Image" style="max-width: 500px;">
-
-
-    <p><strong>Generated Caption:</strong> {{ generated_caption }}</p>
-    <p><strong>Rhyming Caption:</strong> {{ rhyming_caption }}</p>
+    <div class="container">
+        <h1 id="insta">InstaCaption</h1>
+        <h1>Example Post</h1>
+        <img src="{{ image_path }}" alt="Uploaded Image" style="max-width: 500px;">
+        <p><strong>Generated Caption:</strong> <span class="generated-caption">{{ generated_caption }}</span></p>
+        <p><strong>Rhyming Caption:</strong> <span class="rhyming-caption">{{ rhyming_caption }}</span></p>
+    </div>
 </body>
 </html>

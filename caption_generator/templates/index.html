@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Image Caption Generator</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>InstaCaption</title>
 </head>
 <body>
-    <h1>Image Caption Generator</h1>
-    <form action="{% url 'caption_generator:generate_caption' %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        <input type="file" name="image" accept="image/jpeg, image/png" required>
-        <br>
-        <button type="submit">Generate Caption</button>
-    </form>
+    <div class="container">
+        <h1 id="insta">InstaCaption</h1>
+        <form action="{% url 'caption_generator:generate_caption' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="image" accept="image/jpeg, image/png" required>
+            <br>
+            <button type="submit">Generate Caption</button>
+        </form>
+    </div>
 </body>
 </html>

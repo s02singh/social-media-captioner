@@ -17,6 +17,7 @@ processor = AutoProcessor.from_pretrained("microsoft/git-base-coco")
 model = AutoModelForCausalLM.from_pretrained("microsoft/git-base-coco")
 
 def generate_caption(request):
+    
     if request.method == 'POST':
         # Get the uploaded image from the request
         image_file = request.FILES.get('image')
@@ -37,6 +38,7 @@ def generate_caption(request):
         generated_caption = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
         
         # Generate rhyming caption using OpenAI API
+        
         prompt = "Generate a short rhyming Instagram caption using the prompt: " + generated_caption
         response = openai.Completion.create(
             engine="text-davinci-003",
@@ -48,6 +50,7 @@ def generate_caption(request):
         )
         rhyming_caption = response.choices[0].text.strip()
         
+       
         # Render the result template
         return render(request, 'result.html', {
             'image_path': image_path,

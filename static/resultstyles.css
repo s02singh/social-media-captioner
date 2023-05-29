@@ -1,0 +1,50 @@
+/* styles.css */
+/* Add your custom styles here */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1#insta {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    /* Also define standard property for compatibility */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 36px;
+    margin-bottom: 20px;
+    margin-top: 0; /* Added to remove default top margin */
+  }
+  
+  img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  
+  .generated-caption {
+    font-size: 20px;
+    color: #285AEB;
+  }
+  
+  .rhyming-caption {
+    font-size: 16px;
+    color: #777;
+  }
+  
