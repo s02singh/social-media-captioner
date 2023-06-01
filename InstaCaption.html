@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>InstaCaption</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background-color:black">
+  <header id="insta">
+    <h3>InstaCaption</h3>
+  </header>
+  <main>
+    <div id="image-container">
+      <!-- Display the uploaded image here -->
+      <img id="uploaded-image" src="" alt="Uploaded Image">
+    </div>
+    <div id="caption-container">
+      <!-- Display the generated caption here -->
+      <p id="generated-caption">Generated Caption</p>
+    </div>
+    <form id="upload-form">
+      <input type="file" id="image-upload" accept="image/*">
+      <button type="submit" id="submit-button">Generate Caption</button>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
